@@ -249,7 +249,13 @@ h2 { font-size: clamp(58px, 7.4vw, 112px); }
   .section-intro, .gallery-heading p { margin-top: 22px; padding: 0; font-size: 13px; }
   .training-layout { display: flex; flex-direction: column; gap: 37px; margin-top: 45px; align-items: stretch; }
   .training-image { height: 275px; }
-  .direction-row { min-height: 67px; grid-template-columns: 35px minmax(0, 1fr) 24px; }
+  /* Training rows stay inside the container even when a touch browser keeps
+     :hover/:focus-visible active after tapping an item. */
+  .direction-row { width: 100%; min-height: 67px; min-width: 0; max-width: 100%; grid-template-columns: 30px minmax(0, 1fr) 22px; padding-left: 0; padding-right: 0; }
+  .direction-name { min-width: 0; max-width: 100%; white-space: normal; overflow-wrap: normal; word-break: normal; }
+  .direction-arrow { width: 18px; height: 18px; max-width: 100%; transform: none; }
+  .direction-row:hover, .direction-row:focus-visible { padding-left: 0; padding-right: 0; }
+  .direction-row:hover .direction-arrow, .direction-row:focus-visible .direction-arrow { transform: none; }
   .direction-name { font-size: clamp(28px, 9vw, 48px); }
   .equipment-layout { display: flex; flex-direction: column; gap: 39px; margin-top: 52px; align-items: stretch; }
   .equipment-gallery { min-height: 505px; width: 100%; }
