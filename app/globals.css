@@ -226,7 +226,7 @@ h2 { font-size: clamp(58px, 7.4vw, 112px); }
   .hero-overlay { background: linear-gradient(0deg, rgba(9,9,9,.15), rgba(9,9,9,.08) 40%, var(--black) 76%); }
   .hero-grid { min-height: 790px; display: flex; flex-direction: column; align-items: stretch; padding: 132px 0 27px; }
   .hero-copy { padding-top: 0; }
-  .hero h1 { font-size: clamp(72px, 20vw, 140px); overflow-wrap: anywhere; }
+  .hero h1 { font-size: clamp(64px, 19vw, 140px); }
   .hero-description { font-size: 13px; max-width: 270px; margin-top: 22px; }
   .hero-actions { gap: 9px; margin-top: 24px; }
   .button { min-height: 46px; padding: 0 14px; font-size: 9px; }
@@ -234,9 +234,12 @@ h2 { font-size: clamp(58px, 7.4vw, 112px); }
   .scroll-cue { margin-top: auto; }
   /* Keep flex/grid children from expanding their parent to min-content width. */
   .hero-copy, .about-grid, .about-heading, .about-copy, .section-heading-row, .section-heading-row > *, .training-layout, .direction-list, .direction-row, .direction-name, .equipment-layout, .equipment-gallery, .equipment-copy, .promo-card, .promo-content, .promo-content > *, .gallery-heading, .gallery-heading > *, .masonry-gallery, .contact-layout, .contact-layout > *, .contact-details, .footer-inner { min-width: 0; max-width: 100%; }
-  h1, h2 { overflow-wrap: anywhere; }
+  /* Large type may wrap between words, never inside a word. */
+  h1, h2 { overflow-wrap: normal; word-break: normal; hyphens: none; white-space: normal; text-wrap: balance; }
   .about-grid { display: flex; flex-direction: column; margin-top: 51px; gap: 27px; }
-  .about-heading h2, .section-heading-row h2, .equipment-copy h2, .gallery-heading h2 { font-size: clamp(60px, 18vw, 105px); }
+  .about-heading h2, .section-heading-row h2 { font-size: clamp(52px, 16.5vw, 105px); }
+  .equipment-copy h2 { font-size: clamp(48px, 15vw, 104px); }
+  .gallery-heading h2 { font-size: clamp(58px, 17vw, 105px); }
   .about-mark { margin-top: 22px; }
   .about-image-wrap { height: 255px; margin-top: 4px; }
   .about-copy { padding: 0; }
@@ -270,7 +273,7 @@ h2 { font-size: clamp(58px, 7.4vw, 112px); }
   .gallery-item-4 { grid-column: 1; grid-row: 3 / span 2; }
   .gallery-item-5 { grid-column: 2; grid-row: 4; }
   .final-cta { padding: 92px 0 103px; }
-  .final-cta h2 { font-size: clamp(76px, 22vw, 132px); margin: 26px 0 17px; }
+  .final-cta h2 { font-size: clamp(68px, 20vw, 132px); margin: 26px 0 17px; }
   .contact-layout { display: flex; flex-direction: column; gap: 55px; margin-top: 53px; }
   .contact-layout h2 { font-size: clamp(67px, 19vw, 110px); }
   .contact-note { font-size: 13px; margin-top: 21px; }
