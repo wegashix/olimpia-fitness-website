@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Inter } from "next/font/google";
+import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
 
-const bebas = Bebas_Neue({ subsets: ["latin"], weight: "400", variable: "--font-display" });
+const oswald = Oswald({ subsets: ["cyrillic", "latin"], weight: ["500", "600", "700"], variable: "--font-display" });
 const inter = Inter({ subsets: ["latin", "cyrillic"], variable: "--font-body" });
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="ru" className={`${bebas.variable} ${inter.variable}`}>
+    <html lang="ru" className={`${oswald.variable} ${inter.variable}`}>
       <body>{children}</body>
     </html>
   );
